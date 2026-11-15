@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="todo-card">
+
+            <header>
+                <div>
+                    <p class="brand">TASKFLOW</p>
+                    <h1>My Tasks</h1>
+                    <p class="subtitle">Organize your day, one task at a time.</p>
+                </div>
+            </header>
+
+            <!-- Add Task -->
+            <div class="task-input-container">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                >
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+
+            <!-- Task Statistics -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalCount">0</span>
+                    <span class="stat-label">Total</span>
+                </div>
+
+                <div class="stat-card completed-stat">
+                    <span class="stat-number" id="completedCount">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+
+                <div class="stat-card pending-stat">
+                    <span class="stat-number" id="pendingCount">0</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-section">
+                <div class="section-heading">
+                    <h2>Your Tasks</h2>
+                    <span id="taskStatus">0 tasks</span>
+                </div>
+
+                <p id="emptyMessage" class="empty-message">
+                    ✨ Your task list is empty. Add a task to get started!
+                </p>
+
+                <ul id="taskList"></ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
